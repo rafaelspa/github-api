@@ -1,0 +1,18 @@
+header {
+    height: 62px;
+    background-color: var(--ga-color-bg-primary);
+    display: flex;
+    align-items: center;
+    padding-left: 41px;
+}
+
+.ga-home-title-container {
+    width: 248px;
+}
+
+.ga-home-title {
+    font-size: 24px;
+    color: var(--ga-color-font-primary);
+    font-weight: 500;
+    height: 32px;
+}

@@ -1,9 +1,14 @@
+import "./styles.css";
 import { Outlet } from "react-router-dom";
 
 export default function Home() {
   return (
     <>
-      <h1>Home</h1>
+      <header>
+        <div className="ga-home-title-container">
+          <h1 className="ga-home-title">Github API</h1>
+        </div>
+      </header>
       <Outlet />
     </>
   );
