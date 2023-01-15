@@ -5,5 +5,5 @@ type Props = {
 };
 
 export default function PrimaryButton({ text }: Props) {
-  return <button className="ga-primary-button">{text}</button>;
+  return <button type="button" className="ga-primary-button">{text}</button>;
 }

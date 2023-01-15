@@ -1,7 +1,12 @@
+import './styles.css';
+import InputBlock from "../../../components/InputBlock";
+
 export default function FindUser() {
 
     return (
 
-        <h2>Find User</h2>
+        <main className="ga-find-user-main">
+            <InputBlock />
+        </main>
     )
 }
