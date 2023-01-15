@@ -1,0 +1,8 @@
+.ga-primary-button {
+    width: 101px;
+    height: 40px;
+    background-color: var(--ga-color-bg-primary);
+    color: var(--ga-color-font-primary);
+    border: none;
+    border-radius: 4px;
+}
