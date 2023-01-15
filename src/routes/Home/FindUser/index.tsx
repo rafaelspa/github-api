@@ -1,5 +1,6 @@
 import './styles.css';
 import InputBlock from "../../../components/InputBlock";
+import OutputBlock from '../../../components/OutputBlock';
 
 export default function FindUser() {
 
@@ -7,6 +8,7 @@ export default function FindUser() {
 
         <main className="ga-find-user-main">
             <InputBlock />
+            <OutputBlock />
         </main>
     )
 }
