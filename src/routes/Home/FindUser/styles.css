@@ -6,3 +6,123 @@
     flex-direction: column;
     gap: 54px;
 }
+
+.ga-input-block {
+    width: 100%;
+    height: 270px;
+    background-color: var(--ga-color-bg-input);
+    border-radius: 16px;
+    padding: 54px 31px;
+}
+
+.ga-input-block-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 24px;
+}
+
+.ga-input-block-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ga-input-block-title {
+    font-size: 38px;
+}
+
+.ga-input-text {
+    width: 298px;
+    height: 40px;
+    border: 1px solid var(--ga-color-border-input);
+    border-radius: 4px;
+    padding: 0 17px;
+    outline: none;
+    color: var(--ga-color-font-input-text);
+}
+
+.ga-input-text::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--ga-color-font-input-placeholder);
+}
+
+.ga-output-block {
+    background-color: var(--ga-color-bg-output-primary);
+    width: 100%;
+    height: 334px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.ga-output-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 19px;
+    padding: 0 35px 0 38px;
+}
+
+.ga-output-img {
+    width: 247px;
+    height: 247px;
+}
+
+.ga-output-form {
+    background-color: var(--ga-color-bg-output-secondary);
+    width: 100%;
+    height: 247px;
+    border-radius: 6px;
+    padding: 8px 16px 17px 14px;
+}
+
+.ga-output-form-title {
+    margin-bottom: 19px;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--ga-color-font-output-primary);
+}
+
+.ga-output-form-input {
+    border: 1px solid var(--ga-color-border-output);
+    border-radius: 4px;
+    height: 40px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    color: var(--ga-color-font-terciary);
+    font-weight: 700;
+}
+
+.ga-output-form-input p {
+    margin-left: 4px;
+    font-size: 16px;
+    font-weight: 400;
+}
+    
+.ga-output-form-url + p {
+    color: var(--ga-color-font-output-primary);
+}
+
+header {
+    height: 62px;
+    background-color: var(--ga-color-bg-primary);
+    display: flex;
+    align-items: center;
+    padding-left: 41px;
+}
+
+.ga-home-title-container {
+    width: 248px;
+}
+
+.ga-home-title {
+    font-size: 24px;
+    color: var(--ga-color-font-primary);
+    font-weight: 500;
+    height: 32px;
+}

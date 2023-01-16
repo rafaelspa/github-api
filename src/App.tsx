@@ -8,11 +8,10 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home/>}>
+        <Route path="/" element={<Home />}>
           <Route index element={<Navigate to="/home" />} />
-          <Route path="home" element={<HomeBody/>} />
-          <Route path="find-user" element={<FindUser/>} />
-          <Route path="*" element={<NotFound/>} />
+          <Route path="home" element={<HomeBody />} />
+          <Route path="find-user" element={<FindUser />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
