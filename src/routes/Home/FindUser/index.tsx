@@ -59,7 +59,7 @@ export default function FindUser() {
   return (
     <main className="ga-find-user-main">
       <div className="ga-input-block">
-        <form className="ga-input-block-form">
+        <form className="ga-input-block-form" onSubmit={handleFormSubmit}>
           <div className="ga-input-block-text">
             <h2 className="ga-input-block-title">Encontre um perfil Github</h2>
             {formData && (
@@ -76,7 +76,6 @@ export default function FindUser() {
           <PrimaryButton
             text="Encontrar"
             buttonType="submit"
-            onClick={handleFormSubmit}
           />
         </form>
       </div>
