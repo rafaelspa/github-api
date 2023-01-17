@@ -1,7 +1,8 @@
 .ga-output-block {
     background-color: var(--ga-color-bg-output-primary);
     width: 100%;
-    height: 334px;
+    max-height: 334px;
+    height: 100%;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -17,8 +18,10 @@
 }
 
 .ga-output-img {
-    width: 247px;
-    height: 247px;
+    max-width: 247px;
+    max-height: 247px;
+    width: 100%;
+    height: 100%;
 }
 
 .ga-output-form {
@@ -56,4 +59,21 @@
     
 .ga-output-form-url + p {
     color: var(--ga-color-font-output-primary);
+}
+
+@media (max-width: 768px) {
+    .ga-output-container {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .ga-output-block {
+        max-height: unset;
+        height: unset;
+        padding: 20px 0;
+    }
+
+    .ga-output-form-input {
+        overflow-x: auto;
+    }
 }

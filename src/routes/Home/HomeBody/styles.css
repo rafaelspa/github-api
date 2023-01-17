@@ -1,5 +1,5 @@
 .ga-home-body-main {
-    padding-left: 41px;
+    padding: 0 41px;
 }
 
 .ga-home-text-block {
@@ -16,5 +16,14 @@
     font-weight: 700;
     font-size: 24px;
     color: var(--ga-color-font-terciary);
+}
 
+@media (max-width: 768px) {
+    .ga-home-text-block h2 {
+        font-size: 24px;
+    }
+
+    .ga-home-text-block p {
+        font-size: 16px;
+    }
 }

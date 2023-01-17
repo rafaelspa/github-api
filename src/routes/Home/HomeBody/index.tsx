@@ -1,6 +1,6 @@
-import './styles.css';
+import "./styles.css";
 import PrimaryButton from "../../../components/PrimaryButton";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export default function HomeBody() {
   return (
@@ -9,8 +9,8 @@ export default function HomeBody() {
         <h2>Desafio Github API</h2>
         <p>DevSuperior - Escola de programação</p>
       </div>
-      <Link to='/find-user'>
-        <PrimaryButton text="Começar" onClick={undefined} buttonType="button"/>
+      <Link to="/find-user">
+        <PrimaryButton text="Começar" onClick={undefined} buttonType="button" />
       </Link>
     </main>
   );
