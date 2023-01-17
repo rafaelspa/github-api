@@ -5,18 +5,18 @@ import { useEffect, useState } from "react";
 import { GithubProfile } from "../../../models/github-profile";
 import OutputBlock from "../../../components/OutputBlock";
 import NotFound from "../NotFound";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 export default function FindUser() {
   type FormData = {
-    githubHandle: string;
+    login: string;
   };
 
-  let navigate = useNavigate();
-
   const [formData, setFormData] = useState<FormData>({
-    githubHandle: "",
+    login: "",
   });
+
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const [githubProfile, setGithubProfile] = useState<GithubProfile>();
 
@@ -26,11 +26,17 @@ export default function FindUser() {
     const value = event.target.value;
     const name = event.target.name;
     setFormData({ ...formData, [name]: value });
+    let login = value;
+    if (login) {
+      setSearchParams({ login });
+    } else {
+      setSearchParams({});
+    }
   }
 
   function handleFormSubmit(event: any) {
     event.preventDefault();
-    findGithubUser(formData.githubHandle)
+    findGithubUser(formData.login)
       .then((response) => {
         setGithubProfile({
           avatar_url: response.data.avatar_url,
@@ -48,7 +54,7 @@ export default function FindUser() {
   useEffect(() => {
     setGithubProfile(undefined);
     setNotFound(false);
-  } , [formData]);
+  }, [formData]);
 
   return (
     <main className="ga-find-user-main">
@@ -58,8 +64,8 @@ export default function FindUser() {
             <h2 className="ga-input-block-title">Encontre um perfil Github</h2>
             {formData && (
               <input
-                name="githubHandle"
-                value={formData.githubHandle}
+                name="login"
+                value={formData.login}
                 className="ga-input-text"
                 type="text"
                 placeholder="Usuário Github"
